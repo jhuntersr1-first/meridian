@@ -28,6 +28,10 @@ code (`apne1`, `saeast1`) so a resource's name tells you where it lives.
 
 ## Architecture
 
+An editable Visio diagram of this architecture is at
+[`docs/diagrams/meridian_architecture.vsdx`](docs/diagrams/meridian_architecture.vsdx).
+The text version below is kept in sync for anyone viewing the repo without Visio.
+
 ```text
                                    Doctors / Clients
                                           |
