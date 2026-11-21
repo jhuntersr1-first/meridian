@@ -1,0 +1,14 @@
+{
+  "mode": "deep",
+  "incident_id": "manual-test-deep-001",
+  "AlarmName": "apne1-db-connection-failure",
+  "NewStateValue": "ALARM",
+  "NewStateReason": "Manual test invocation — deep mode (60-min window + WAF correlation)",
+  "StateChangeTime": "2026-11-21T07:30:00.000+0000",
+  "Trigger": {
+    "MetricName": "DBConnectionErrors",
+    "Namespace": "Lab/RDSApp",
+    "Threshold": 3.0,
+    "ComparisonOperator": "GreaterThanOrEqualToThreshold"
+  }
+}

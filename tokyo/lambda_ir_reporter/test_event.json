@@ -1,0 +1,10 @@
+{
+  "Records": [
+    {
+      "Sns": {
+        "Subject": "ALARM: apne1-db-connection-failure",
+        "Message": "{\"AlarmName\":\"apne1-db-connection-failure\",\"NewStateValue\":\"ALARM\",\"NewStateReason\":\"Threshold crossed: 3 datapoints were greater than or equal to the threshold (3.0).\",\"StateChangeTime\":\"2026-11-21T07:30:00.000+0000\",\"Trigger\":{\"MetricName\":\"DBConnectionErrors\",\"Namespace\":\"Lab/RDSApp\",\"Threshold\":3.0,\"ComparisonOperator\":\"GreaterThanOrEqualToThreshold\"}}"
+      }
+    }
+  ]
+}
