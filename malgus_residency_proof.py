@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
-import boto3, json
+"""
+malgus_residency_proof.py
 
-# Verifies APPI data-residency compliance by confirming RDS instances exist
-# only in Tokyo (ap-northeast-1) and not in Sao Paulo (sa-east-1).
+Verifies APPI data-residency compliance by confirming RDS instances exist
+only in Tokyo (ap-northeast-1) and not in Sao Paulo (sa-east-1), and
+produces a pass/fail evidence artifact suitable for audit submission.
+"""
+import boto3, json
 
 def list_rds(region):
     rds = boto3.client("rds", region_name=region)

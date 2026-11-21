@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
+"""
+malgus_cloudtrail_last_changes.py
+
+Queries recent CloudTrail events in both regions and summarizes who changed
+what, when, and from which AWS service. Used for incident-response triage
+and as a change-history artifact during audit review.
+"""
 import boto3, json
 from datetime import datetime, timezone, timedelta
-
-# Queries recent CloudTrail events in both regions to produce a change-history
-# summary for incident response and audit review.
 
 def lookup(region, minutes=120):
     ct = boto3.client("cloudtrail", region_name=region)

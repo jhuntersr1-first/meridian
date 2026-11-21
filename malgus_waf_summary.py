@@ -1,10 +1,18 @@
 
 #!/usr/bin/env python3
+"""
+malgus_waf_summary.py
+
+Summarizes WAF activity from a CloudWatch Logs Insights log group over a
+given time window: top actions (ALLOW/BLOCK/COUNT) and the top client IPs
+by request volume.
+
+This kind of WAF triage supports day-to-day security operations (spotting
+traffic spikes or false positives) and doubles as audit evidence for
+showing what the WAF actually blocked.
+"""
 import boto3, time, json, argparse
 from datetime import datetime, timezone, timedelta
-
-# Summarizes WAF activity from a CloudWatch Logs Insights log group:
-# top actions (ALLOW/BLOCK/COUNT) and top client IPs over a time window.
 
 logs = boto3.client("logs")
 

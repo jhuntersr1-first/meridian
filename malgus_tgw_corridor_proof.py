@@ -1,9 +1,16 @@
 #!/usr/bin/env python3
-import boto3, json
+"""
+malgus_tgw_corridor_proof.py
 
-# Captures a snapshot of Transit Gateway resources (gateways and attachments)
-# in both Tokyo and Sao Paulo, as evidence that the cross-region network
-# corridor is actually provisioned and attached.
+Captures a snapshot of Transit Gateway resources (gateways and attachments)
+in both Tokyo and Sao Paulo, used as evidence that the cross-region network
+corridor between the two regions is actually provisioned and attached --
+not just assumed from the Terraform plan.
+
+Networking evidence like this is routinely requested during audits and
+incident response in multi-region environments.
+"""
+import boto3, json
 
 def tgw_snapshot(region):
     ec2 = boto3.client("ec2", region_name=region)
